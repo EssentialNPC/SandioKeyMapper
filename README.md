@@ -13,6 +13,7 @@ It is based on the SDK that came with the mouse driver.  However, this program d
 The application window displays the status of the 3D buttons and the information about the most recent keystroke (when the app window was in focus, physical or simulated by the program) for reference and testing.
 
 # Configuration files
+[Sample Config File](config.txt)
 ## Location
 By default the program reads key mapping configuration from the file "config.txt" in its directory.  An alternate config file can be specified on the command line (including using a custom Windows shortcut).
 ## Simple Syntax
