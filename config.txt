@@ -1,0 +1,25 @@
+# Define one setting per line.  On each line, specify the direction of one or more buttons,
+# followed by colon and a keystroke.  # begins a comment.
+# To specify a button direction, combine a button code with a direction code.
+#   Button codes: Top, Right, Left (or T, R, L)
+#   Direction codes: Forward, Back, Left, Right, Up, Down (or F, B, L, R, U, D)
+# To specify a keystroke, type its typographical character (if it exists) or use a keyword such as
+#    Space, Enter, Tab, LeftArrow, PageUp, ...
+#    See README.md for complete list.
+# Sample 1: left button maps to the classic WSAD scheme
+
+LeftForward: W
+LeftBack   : S
+LeftDown   : A
+LeftUp     : D
+
+# Sample 2: top button maps to the eight numeric keypad directions
+
+TF!LR: NumPad8
+TFR  : NumPad9
+TR!FB: NumPad6
+TRB  : NumPad3
+TB!LR: NumPad2
+TBL  : NumPad1
+TL!FB: NumPad4
+TLF  : NumPad7
