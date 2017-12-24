@@ -75,6 +75,7 @@ bool ParseConfig(const TCHAR *fileName, TCHAR *statusBuf, size_t nStatusChars) {
 	FILE *inFile = _tfopen(fileName, _T("rt"));
 	if(!inFile) {
 		_sntprintf(statusBuf, nStatusChars, "Failed to open config file: %s", fileName);
+		return false;
 	}
 	const size_t nMaxBuf = 128;
 	char buf[nMaxBuf];
