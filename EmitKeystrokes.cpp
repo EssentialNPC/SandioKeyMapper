@@ -361,7 +361,9 @@ bool ParseConfig(const TCHAR *fileName, TCHAR *statusBuf, size_t nStatusChars) {
 			// Interpret the key definition
 			if(end == pos + 1) {	// simple character
 				newRule.vk = toupper(*pos);
-			} else {	// a word that is hopefully in our table
+			} else if (sscanf(pos, "%hi,%hi,%i", &newRule.vk, &newRule.scan, &newRule.flags) >= 2) {
+				// explicit specification, use it
+			} else{	// a word that is hopefully in our table
 				*end = 0;
 				size_t iKeyName;
 				for(iKeyName = 0; iKeyName < k_nKeyNames; iKeyName++) {
